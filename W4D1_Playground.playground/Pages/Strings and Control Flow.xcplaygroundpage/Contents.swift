@@ -127,10 +127,7 @@ default:
 var year = 2000
 var isLeapYear = false
 
-if year % 4 == 0 {
-    isLeapYear = true
-}
-if (year % 100 == 0 && year % 400 == 0) {
+if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)){
     isLeapYear = true
 } else {
     isLeapYear

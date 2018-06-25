@@ -19,19 +19,26 @@ myDictionary["Principal"] = 1
  - Experiment:
  Try creating an array and dictionary using `'let'` vs `'var'` then try adding something to them. What do you notice? For the array, you can use a method called 'append' to add something to it.
  */
+var myArray = [1,2,3]
+myArray.append(4)
+
+let myOtherArray = [1,2,3]
+myArray.append(4)
 
 
 /*:
  - Experiment:
  Try creating an empty array with an explicit type `[type]`. What happens when you add a value that isn't the same type?
  */
-
+var emptyArray = [Int]()
+//emptyArray.append("Hello")
+//cannot convert value to type 'String' to expected argument type 'Int'
 
 /*:
  - Experiment:
  Try creating an empty dictionary with an explicit type. `[keyType: valueType]`
  */
-
+var emptyDict = [String: Int]()
 
 /*:
  - Experiment:
@@ -43,6 +50,14 @@ myDictionary["Principal"] = 1
  - reverse
  - count
  */
+var methodOptions = [1,2,3,4,5,6,7,8,9]
+
+methodOptions.append(10)
+methodOptions.insert(0, at: 0)
+methodOptions.remove(at: 1)
+methodOptions.reverse()
+methodOptions.count
+methodOptions.removeAll()
 
 
 /*:
@@ -52,7 +67,12 @@ myDictionary["Principal"] = 1
  - isEmpty
  - count
  */
+var myDict = ["firstNumber" : 1 , "secondNumber" : 2 , "thirdNumber" : 3]
+myDict["firstNumber"] //Case sensitive
 
+myDict.removeValue(forKey: "firstNumber")
+myDict.isEmpty
+myDict.count
 
 /*:
  - Callout(Challenge):
@@ -60,7 +80,12 @@ myDictionary["Principal"] = 1
  
     Finally, print out each person's name from the array using their index and string interpolation
 */
+var nameArray = [String]()
+nameArray.append("John")
+nameArray.append("Karen")
+nameArray.append("Jane")
 
+print("\(nameArray[0]),\(nameArray[1]), \(nameArray[2])")
 
 /*:
  - Callout(Challenge):
@@ -74,6 +99,8 @@ myDictionary["Principal"] = 1
  
     On the next line, add this last person's info: Bob - $45000
  */
+var salaryDictionary = ["John" : 50000 , "Jane" : 70000 , "Karen" : 62000]
+salaryDictionary["Bob"] = 45000
 
 
 //: [Next](@next)
