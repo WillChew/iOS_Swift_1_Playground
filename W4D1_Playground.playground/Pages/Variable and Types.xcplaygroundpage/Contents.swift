@@ -21,7 +21,8 @@ students = 7
  Try creating a variable and/or constant for your name, and age.
  What happens if you try to change the value of a constant?
  */
-
+//school = "Waterloo University"
+//cannot assign to value: 'school is a 'let' constant
 
 //: ---
 /*:
@@ -42,7 +43,7 @@ students = 7
   What happens if you try to change the value to a `Double` like 4.1?
  */
 
-var weeksCompleted = 4
+var weeksCompleted = 4.1
 
 /*:
  As you can see, you don't have to write the type explicitly. Providing a value when you create a constant or variable lets the compiler _infer_ its type. In the example above, the compiler infers that `students` is an integer because its initial value is an integer.
@@ -72,11 +73,11 @@ let explicitDouble: Double = 70
  */
 
 var tipAmount = 6.01
-// tipAmount's type is:
+// tipAmount's type is: Double
 
 
 var isOpen = true
-// isOpen's type is:
+// isOpen's type is: BOOL
 
 /*:
 Values are never implicitly converted to another type. If you need to convert a value to a different type, explicitly make an instance of the desired type.
@@ -114,6 +115,9 @@ Volume of cylinder = pi * radius^2 * height
 /*:
  Hint: Make sure your radius is of type `Double`
  */
+let pi = 3.14
+var radius : Double = 10
+let area = pi * (radius*radius)
 
 /*:
  - Callout(Problem 2):
@@ -122,7 +126,10 @@ Volume of cylinder = pi * radius^2 * height
 /*:
  Hint: Radius is half the length of the diameter
  */
+let diameter : Double = 24
+radius = diameter/2
 
+let circumference = 2 * pi * radius
 /*:
  - Callout(Problem 3):
  Find the volume of a cylinder with a radius of 5 metres and a height of 7 metres
@@ -130,6 +137,10 @@ Volume of cylinder = pi * radius^2 * height
 /*:
  Hint: You can double-check your answers yourself or on Google... Google has a really easy input mechanism for all three of these formulas if you just search them up.
  */
+radius = 5
+var height : Double = 7
+let volume = pi * (radius * radius) * height
+
 
 
 //: [Next](@next)
