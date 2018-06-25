@@ -25,13 +25,19 @@ print("Your name is \(name)")
  - Example:
  "Your name is Joe Smith, your age is 35, and your height is 175cm."
  */
+name = "Will"
+var age = 23
+var height = 180
 
+print("Your name is \(name), your age is \(age), and your height is \(height)cm")
 
 /*:
  - Experiment:
  Math calculations can be included within the "`\()`" such as adding two variables together. Try printing out a sentence using string interpolation and include a calculation.
  */
-
+let number1 = 1
+let number2 = 2
+print("Basic math indicates: \(number1) + \(number2) = \(number1 + number2)")
 /*:
  ## Control Flow
 
@@ -51,7 +57,16 @@ if myConditional {
  - Experiment:
   Try creating your own 'if' statement that determines whether a given number is even, odd or zero.
  */
+let theNumber = 2
 
+if theNumber == 0 {
+    print("Number is zero")
+}
+if theNumber % 2 != 0 {
+    print("Odd Number")
+} else {
+    print("Number is even")
+}
 
 /*:
  - Experiment:
@@ -77,13 +92,29 @@ default:
  - Callout(Challenge):
  Create an if/else statement to print out the grammatically correct description of the number of bicycles there are. Declare a 'bicycleCount' variable with any number you wish then cover the conditions for zero bicycles, 1 bicycle, and more than 1 bicycle. ie: 'There are zero bicycles', 'There is 1 bicycle', 'There are 20 bicycles'
  */
+let bicycleCount = 20
 
+if bicycleCount == 0 {
+    print("There are zero bicycles")
+}
+if bicycleCount == 1 {
+    print("There is 1 bicycle")
+} else {
+    print("There are \(bicycleCount) bicycles")
+}
 
 /*:
  - Callout(Challenge):
  Rewrite the above Challenge as a switch statement
  */
-
+switch bicycleCount {
+case 0:
+    print("There are zero bicycles")
+case 1:
+    print("There is 1 bicycle")
+default:
+    print("There are \(bicycleCount) bicycles")
+}
 
 /*:
  - Callout(Challenge):
@@ -93,5 +124,15 @@ default:
  - If the year can be evenly divided by 100 = Is NOT a Leap Year, unless;
  - The year is also evenly divisible by 400 = Is Leap Year
  */
+var year = 2000
+var isLeapYear = false
 
+if year % 4 == 0 {
+    isLeapYear = true
+}
+if (year % 100 == 0 && year % 400 == 0) {
+    isLeapYear = true
+} else {
+    isLeapYear
+}
 //: [Next](@next)
